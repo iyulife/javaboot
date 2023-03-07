@@ -11,8 +11,8 @@
     <groupId>io.javaboot</groupId>
     <artifactId>javaboot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>javaboot</name>
-    <description>javaboot</description>
+    <name>javaBoot</name>
+    <description>javaBoot</description>
     <properties>
         <java.version>17</java.version>
     </properties>
