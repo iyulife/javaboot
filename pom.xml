@@ -13,9 +13,16 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>javaBoot</name>
     <description>javaBoot</description>
+    <packaging>pom</packaging>
+
     <properties>
         <java.version>17</java.version>
     </properties>
+
+    <modules>
+        <module>bootstrap</module>
+    </modules>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -62,7 +69,7 @@
         </plugins>
         <resources>
             <resource>
-                <directory>src/main/java</directory>
+                <directory>bootstrap/src/main/java</directory>
                 <includes>
                     <include>**/*.yml</include>
                     <include>**/*.properties</include>
@@ -71,7 +78,7 @@
                 <filtering>false</filtering>
             </resource>
             <resource>
-                <directory>src/main/resources</directory>
+                <directory>bootstrap/src/main/resources</directory>
                 <includes>
                     <include>**/*.yml</include>
                     <include>**/*.properties</include>
