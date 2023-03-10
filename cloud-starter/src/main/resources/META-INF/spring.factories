@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    net.cloudlinked.mesh.core.cloud.config.OpenFeignAutoConfiguration , \
+    net.cloudlinked.mesh.core.cloud.config.RestTemplateConfiguration, \
+    net.cloudlinked.mesh.core.cloud.config.GrayscaleConfig
+
