@@ -2,13 +2,17 @@ package io.javaboot;
 
 import io.javaboot.core.common.result.ResultModel;
 import io.javaboot.core.common.result.ResultUtil;
+import io.javaboot.log.annotation.JavaBootTraceLog;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.io.Serializable;
 
 /**
  * Description: 启动类
@@ -31,7 +35,8 @@ public class JavaBootApplication {
      */
 
     @Data
-    public class User {
+    public static class User implements Serializable {
+        private static final long serialVersionUID = 1L;
         private String id;
         private String name;
         private String age;
@@ -42,7 +47,8 @@ public class JavaBootApplication {
     public class TestController {
         @RequestMapping(value = {"/index"})
         @ResponseBody
-        public ResultModel<User> index(User user) {
+        @JavaBootTraceLog(value = "test")
+        public ResultModel<User> index(@RequestBody User user) {
             return ResultUtil.success(user);
         }
     }

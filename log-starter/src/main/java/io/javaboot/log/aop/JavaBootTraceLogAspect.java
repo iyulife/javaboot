@@ -57,6 +57,6 @@ public class JavaBootTraceLogAspect {
         if (javaBootTraceLog == null) {
             return;
         }
-        log.info("des={},id={}" + javaBootTraceLog.value(), UUIDUtil.EID());
+        log.info("id={},des={}", UUIDUtil.EID(), javaBootTraceLog.value());
     }
 }

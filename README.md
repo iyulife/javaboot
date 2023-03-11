@@ -44,11 +44,23 @@
 
 ## 项目结构
 
+### ---bootstrap 启动器
+
+### ---cloud-starter 微服务自动装配器
+
+### ---core 核心器
+
+### ---log-starter 日志自动装配器
+
 ## 说明
 
 - 引入spring boot 3.0.4
 - 引入jdk 17.06
 - 如果报错找不到“C:/TEMP",在启动时加入参数`-Djava.io.tmpdir=D:\TEMP`
+
+## 未完成
+
+- 日志可以读取application.properties
 
 ## 参照
 
