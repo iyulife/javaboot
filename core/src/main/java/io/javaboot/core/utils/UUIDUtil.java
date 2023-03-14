@@ -1,8 +1,11 @@
 package io.javaboot.core.utils;
 
 import cn.hutool.core.util.IdUtil;
+import io.javaboot.core.beans.TraceLogBean;
 import io.javaboot.core.exception.JavaBootException;
-import org.apache.commons.lang3.StringUtils;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static io.javaboot.core.enums.ExceptionEnum.JAVA_BOOT_TRACE_LOG_ID_IS_NULL;
 
@@ -14,7 +17,10 @@ import static io.javaboot.core.enums.ExceptionEnum.JAVA_BOOT_TRACE_LOG_ID_IS_NUL
  */
 public class UUIDUtil {
 
-    private final static ThreadLocal<String> TRACE_LOG_ID = new ThreadLocal<>();
+    /**
+     * 线程ID为key
+     */
+    public final static ThreadLocal<Map<Long, TraceLogBean>> TRACE_LOG_ID = new ThreadLocal<>();
 
     /**
      * hutool 雪花算法实现的
@@ -30,11 +36,25 @@ public class UUIDUtil {
      *
      * @return
      */
-    public static String TID() {
-        if (StringUtils.isBlank(TRACE_LOG_ID.get())) {
-            TRACE_LOG_ID.set(UUID());
+    public static TraceLogBean TID() {
+        if (TRACE_LOG_ID.get() == null || TRACE_LOG_ID.get().get(Thread.currentThread().getId()) == null) {
+            TRACE_LOG_ID.set(getMap());
         }
-        return TRACE_LOG_ID.get();
+        return TRACE_LOG_ID.get().get(Thread.currentThread().getId());
+    }
+
+    /**
+     * 获取线程对应的log
+     *
+     * @return
+     */
+    private static Map<Long, TraceLogBean> getMap() {
+        Map<Long, TraceLogBean> map = new HashMap<>();
+        TraceLogBean bean = new TraceLogBean();
+        bean.setId(UUID());
+        bean.setTime(System.nanoTime());
+        map.put(Thread.currentThread().getId(), bean);
+        return map;
     }
 
     /**
@@ -42,14 +62,10 @@ public class UUIDUtil {
      *
      * @return
      */
-    public static String EID() {
-        if (StringUtils.isBlank(TRACE_LOG_ID.get())) {
+    public static TraceLogBean EID() {
+        if (TRACE_LOG_ID.get() == null || TRACE_LOG_ID.get().get(Thread.currentThread().getId()) == null) {
             throw new JavaBootException(JAVA_BOOT_TRACE_LOG_ID_IS_NULL);
         }
-        try {
-            return TRACE_LOG_ID.get();
-        } finally {
-            TRACE_LOG_ID.remove();
-        }
+        return TRACE_LOG_ID.get().get(Thread.currentThread().getId());
     }
 }

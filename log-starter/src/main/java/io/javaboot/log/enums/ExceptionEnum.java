@@ -30,6 +30,6 @@ public enum ExceptionEnum implements CommonResult {
 
     @Override
     public String getResultModule() {
-        return "[module: javaBoot-log-stater]";
+        return "log-stater";
     }
 }

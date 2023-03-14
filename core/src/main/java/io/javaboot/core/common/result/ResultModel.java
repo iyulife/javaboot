@@ -1,7 +1,7 @@
 package io.javaboot.core.common.result;
 
 /**
- * Description:
+ * Description: 请求返回接口，增加数据和前端分页支持
  *
  * @author iyuLife
  * @date 2023/3/10 14:57
@@ -26,7 +26,7 @@ public interface ResultModel<T> extends Result {
      *
      * @return
      */
-    Integer getTotalCount();
+    int getTotalCount();
 
     /**
      * 每页大小

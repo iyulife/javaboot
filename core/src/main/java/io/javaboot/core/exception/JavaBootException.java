@@ -22,7 +22,7 @@ public class JavaBootException extends RuntimeException {
     }
 
     public JavaBootException(CommonResult result) {
-        super(result.getResultMsg());
-        this.code = result.getResultModule() + result.getResultCode();
+        super(result.getResultModule() + result.getResultMsg());
+        this.code = result.getResultCode();
     }
 }

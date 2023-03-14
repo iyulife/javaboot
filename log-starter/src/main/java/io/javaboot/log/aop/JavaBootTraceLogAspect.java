@@ -1,6 +1,7 @@
 package io.javaboot.log.aop;
 
 
+import com.alibaba.fastjson.JSON;
 import io.javaboot.core.utils.UUIDUtil;
 import io.javaboot.log.annotation.JavaBootTraceLog;
 import jakarta.servlet.http.HttpServletRequest;
@@ -46,7 +47,14 @@ public class JavaBootTraceLogAspect {
      * 获取url,请求方法，ip地址，类名以及方法名，参数
      */
     private void logInfo(HttpServletRequest request, JoinPoint joinPoint) {
-        log.info("id={},url={},method={},ip={},class_method={},args={}", UUIDUtil.TID(), request.getRequestURI(), request.getMethod(), request.getRemoteAddr(), joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName(), joinPoint.getArgs());
+        log.info("requestId={},url={},method={},ip={},class_method={},args={}",
+                UUIDUtil.TID().getId(),
+                request.getRequestURI(),
+                request.getMethod(),
+                request.getRemoteAddr(),
+                joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName(),
+                JSON.toJSONString(joinPoint.getArgs())
+        );
     }
 
     @AfterReturning(pointcut = "javaBootPointCut()")
@@ -57,6 +65,12 @@ public class JavaBootTraceLogAspect {
         if (javaBootTraceLog == null) {
             return;
         }
-        log.info("id={},des={}", UUIDUtil.EID(), javaBootTraceLog.value());
+        log.info("responseId={},duration={}ns,result={},args={}",
+                UUIDUtil.EID().getId(),
+                System.nanoTime() - UUIDUtil.EID().getTime(),
+                javaBootTraceLog.value(),
+                JSON.toJSONString(joinPoint.getArgs())
+        );
+        UUIDUtil.TRACE_LOG_ID.remove();
     }
 }

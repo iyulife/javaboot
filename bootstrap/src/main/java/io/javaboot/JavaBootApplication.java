@@ -35,8 +35,8 @@ public class JavaBootApplication {
      */
 
     @Data
-    public static class User implements Serializable {
-        private static final long serialVersionUID = 1L;
+    public static final class User implements Serializable {
+
         private String id;
         private String name;
         private String age;
