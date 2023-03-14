@@ -4,7 +4,7 @@ import io.javaboot.controller.beans.dto.UserDTO;
 import io.javaboot.controller.beans.vo.UserVO;
 import io.javaboot.core.common.result.ResultModel;
 import io.javaboot.core.common.result.ResultUtil;
-import io.javaboot.log.annotation.JavaBootTraceLog;
+import io.javaboot.starter.log.annotation.JavaBootTraceLog;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
