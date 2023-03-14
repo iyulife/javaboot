@@ -58,7 +58,7 @@
 - 引入jdk 17.06
 - 如果报错找不到“C:/TEMP",在启动时加入参数`-Djava.io.tmpdir=D:\TEMP`
 
-## 未完成
+## 开发计划
 
 - 日志可以读取application.properties
 
