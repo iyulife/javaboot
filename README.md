@@ -65,4 +65,3 @@
 ## 参照
 
 - https://github.com/986223663/spring-cloud-alibaba-dubbo
-- https://gitee.com/jwb-wuyun/tracelog

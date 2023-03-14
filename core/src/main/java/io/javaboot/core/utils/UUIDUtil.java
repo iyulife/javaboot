@@ -32,7 +32,7 @@ public class UUIDUtil {
     }
 
     /**
-     * threadLocal 存储ID,用于多线程
+     * threadLocal 存储ID,用于多线程,自己实现（没有使用MDC）
      *
      * @return
      */
@@ -44,7 +44,7 @@ public class UUIDUtil {
     }
 
     /**
-     * 获取线程对应的log
+     * 获取线程对应的log ,自己实现（没有使用MDC）
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class UUIDUtil {
     }
 
     /**
-     * threadLocal 销毁ID,用于多线程
+     * threadLocal 销毁ID,用于多线程 ,自己实现（没有使用MDC）
      *
      * @return
      */

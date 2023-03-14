@@ -12,7 +12,6 @@ import java.io.Serializable;
  */
 @Data
 public class UserVO implements Serializable {
-
     private static final long serialVersionUID = 1905122041950251237L;
 
     private String id;

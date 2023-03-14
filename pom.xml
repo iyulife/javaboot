@@ -42,6 +42,12 @@
     <!-- 能让所有在子项目中引用一个依赖而不用显 式的列出版本号 -->
     <dependencyManagement>
         <dependencies>
+            <!-- 链路追踪 -->
+            <dependency>
+                <groupId>org.apache.skywalking</groupId>
+                <artifactId>apm-toolkit-logback-1.x</artifactId>
+                <version>8.0.1</version>
+            </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>

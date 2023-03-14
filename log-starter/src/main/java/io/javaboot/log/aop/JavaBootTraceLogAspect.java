@@ -12,11 +12,14 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.slf4j.MDC;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.lang.reflect.Method;
+
+import static io.javaboot.core.contants.ContextConstants.TRACE_ID;
 
 /**
  * Description: JavaBoot跟踪日志拦截器
@@ -47,6 +50,10 @@ public class JavaBootTraceLogAspect {
      * 获取url,请求方法，ip地址，类名以及方法名，参数
      */
     private void logInfo(HttpServletRequest request, JoinPoint joinPoint) {
+        /**
+         * 使用MDC,结合log使用
+         */
+        MDC.put(TRACE_ID, UUIDUtil.UUID());
         log.info("requestId={},url={},method={},ip={},class_method={},args={}",
                 UUIDUtil.TID().getId(),
                 request.getRequestURI(),
@@ -72,5 +79,6 @@ public class JavaBootTraceLogAspect {
                 JSON.toJSONString(joinPoint.getArgs())
         );
         UUIDUtil.TRACE_LOG_ID.remove();
+        MDC.remove(TRACE_ID);
     }
 }

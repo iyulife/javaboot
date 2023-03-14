@@ -26,6 +26,10 @@ class JavaBootApplicationTests {
     @Resource
     private TestController testController;
 
+    /**
+     * 测试对象存储与返回
+     * 测试log切面
+     */
     @Test
     void setTestController() {
         UserDTO user = new UserDTO();
@@ -37,5 +41,4 @@ class JavaBootApplicationTests {
             log.info("<===setTestController===> 返回结果：{}", JSON.toJSONString(resultModel.getData()));
         }
     }
-
 }
