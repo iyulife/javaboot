@@ -6,6 +6,23 @@ spring:
     user:
       name: "admin"
       password: "admin"
+  # 邮件配置
+  mail:
+    host: smtp.qq.com
+    username: 2133283676@qq.com
+    password: rshhosifyezachee
+    properties:
+      mail:
+        smtl:
+          auth: true
+        starttls:
+          enable: true
+          required: true
+  boot:
+    admin:
+      notify:
+        mail:
+          to: 2133283676@qq.com
 server:
   port: 9999
 
