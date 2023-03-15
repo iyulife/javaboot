@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  io.javaboot.starter.log.config.LogAsyncConfig,\
+  io.javaboot.starter.log.config.LogFeignConfig

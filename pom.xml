@@ -33,15 +33,19 @@
         <module>bootstrap</module>
         <!-- 核心器 -->
         <module>core</module>
-        <!-- spring cloud 自动装配器 -->
-        <module>cloud-starter</module>
-        <!-- 日志 自动装配器 -->
-        <module>log-starter</module>
+        <!-- 组件 自动装配器 -->
+        <module>starter</module>
 
     </modules>
     <!-- 能让所有在子项目中引用一个依赖而不用显 式的列出版本号 -->
     <dependencyManagement>
         <dependencies>
+            <!-- 链路追踪 -->
+            <dependency>
+                <groupId>org.apache.skywalking</groupId>
+                <artifactId>apm-toolkit-logback-1.x</artifactId>
+                <version>8.0.1</version>
+            </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
