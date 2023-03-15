@@ -29,7 +29,7 @@
     </properties>
 
     <modules>
-        <!-- 启动器 -->
+        <!-- 监控器 -->
         <module>admin</module>
         <!-- 启动器 -->
         <module>bootstrap</module>
