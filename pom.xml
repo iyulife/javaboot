@@ -30,6 +30,8 @@
 
     <modules>
         <!-- 启动器 -->
+        <module>admin</module>
+        <!-- 启动器 -->
         <module>bootstrap</module>
         <!-- 核心器 -->
         <module>core</module>
@@ -40,6 +42,21 @@
     <!-- 能让所有在子项目中引用一个依赖而不用显 式的列出版本号 -->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>6.0.2</version>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>3.0.1</version>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>3.0.1</version>
+            </dependency>
             <!-- 链路追踪 -->
             <dependency>
                 <groupId>org.apache.skywalking</groupId>

@@ -58,13 +58,12 @@
 - 引入jdk 17.06
 - 如果报错找不到“C:\Windows\Temp",在启动时加入参数`-Djava.io.tmpdir=D:\TEMP`
 - 如果profile设置为Dev则日志只会输出到控制台，否则输出到/val/log目录下
--
 
 ## 开发计划
 
 - 日志链路跟踪（√）
-- Tomcat升级为Undertow
-- 依据阿里巴巴的nacos，实现服务注册与发现
+- Tomcat升级为Undertow（√）
+- 集成feign
 
 ## 参照
 
