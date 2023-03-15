@@ -1,1 +1,1 @@
-logDubboFilter=filter.io.javaboot.starter.log.LogDubboFilter
+logDubboFilter=io.javaboot.starter.log.LogDubboFilter
