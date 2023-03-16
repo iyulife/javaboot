@@ -10,11 +10,21 @@ spring:
   mail:
     host: smtp.qq.com
     username: 3360739100@qq.com
-    password: udjthezlfwcschdh
+    password: wofarsrgokqdciff
     properties:
-        mail.smtp.auth: true # 启用SMTP认证
-        mail.smtp.starttls.enabled: true # 启用SMTP认证
-        mail.smtp.starttls.required: true # 必须采用加密链接
+      properties:
+        mail:
+          smpt:
+            auth: true
+            starttls:
+              enable: true
+              required: true
+  boot:
+    admin:
+      notify:
+        mail:
+          to: 3360739100@qq.com # 邮件收件人
+          from: 3360739100@qq.com # 邮件发件人
 server:
   port: 9999
 
