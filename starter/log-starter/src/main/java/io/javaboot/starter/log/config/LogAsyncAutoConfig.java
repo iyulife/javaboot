@@ -17,6 +17,6 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @Configuration
 @EnableConfigurationProperties(AsyncThreadPoolProperties.class)
 @ConditionalOnProperty(prefix = "io.javaboot.async-thread-pool", name = "enable", havingValue = "true")
-public class LogAsyncConfig implements AsyncConfigurer {
+public class LogAsyncAutoConfig implements AsyncConfigurer {
 
 }

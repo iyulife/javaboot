@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2023/3/10 10:41
  */
 @Configuration
-public class LogFeignConfig {
+public class LogFeignAutoConfig {
     @Bean
     public RequestInterceptor requestInterceptor() {
         return new LogFeignInterceptor();

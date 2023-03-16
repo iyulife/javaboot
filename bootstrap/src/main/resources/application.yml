@@ -28,7 +28,7 @@ management:
 # spring boot admin 配置日志文件
 logging:
   file:
-    name: JavaBoot.log
+    name: /var/log/JavaBoot/JavaBoot-2023-03-16.0.log
   pattern:
     # 日志高亮
     file: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} [%X{traceId}] %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx'

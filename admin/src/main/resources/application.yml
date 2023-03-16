@@ -10,7 +10,8 @@ spring:
   mail:
     host: smtp.qq.com
     username: 3360739100@qq.com
-    password: wofarsrgokqdciff
+    # 暂时不开启
+    # password: wofarsrgokqdciff
     properties:
       properties:
         mail:
