@@ -1,5 +1,2 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  io.javaboot.starter.log.config.LogAsyncAutoConfig,\
-  io.javaboot.starter.log.config.LogFeignAutoConfig
 org.springframework.boot.env.EnvironmentPostProcessor=\
     io.javaboot.starter.log.config.LogInitializerAutoConfig
