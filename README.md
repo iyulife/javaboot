@@ -58,11 +58,11 @@
 - 引入jdk 17.06
 - 如果报错找不到“C:\Windows\Temp",在启动时加入参数`-Djava.io.tmpdir=D:\TEMP`
 - 如果profile设置为Dev则日志只会输出到控制台，否则输出到/val/log目录下
-
+- 刚安装好nacos点击startup.cmd时出现报错`java.io.IOException: java.lang.IllegalArgumentException: db.num is null`
 ## 开发计划
 
 - 日志链路跟踪（√）
-- Tomcat升级为Undertow（√）
+- 集成spring boot admin，支持上下线发邮件、在线查看日志（√）
 - 集成feign
 
 ## 参照

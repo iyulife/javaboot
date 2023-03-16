@@ -23,7 +23,7 @@
         <!-- spring cloud 版本依赖-->
         <spring.cloud.version>2022.0.1</spring.cloud.version>
         <!-- spring cloud alibaba 版本依赖-->
-        <spring-cloud-alibaba-dependencies.version>2021.1</spring-cloud-alibaba-dependencies.version>
+        <spring-cloud-alibaba-dependencies.version>2022.0.0.0-RC1</spring-cloud-alibaba-dependencies.version>
         <!-- huTool 版本依赖 -->
         <hutool.version>5.8.14</hutool.version>
     </properties>
@@ -42,6 +42,22 @@
     <!-- 能让所有在子项目中引用一个依赖而不用显 式的列出版本号 -->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>io.javaboot</groupId>
+                <artifactId>cloud-starter</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+                <version>3.1.6</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-web</artifactId>
@@ -187,5 +203,19 @@
             </plugins>
         </pluginManagement>
     </build>
-
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <!-- 环境标识，需要与配置文件的名称相对应 -->
+                <profiles.active>dev</profiles.active>
+                <nacos.username>nacos</nacos.username>
+                <nacos.password>nacos</nacos.password>
+            </properties>
+            <activation>
+                <!-- 默认环境 -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>
 </project>
