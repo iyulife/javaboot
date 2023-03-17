@@ -16,11 +16,12 @@ import java.util.List;
 
 /**
  * Description: 邮箱事件配置: 通知提醒 每10分钟发送一次提醒
+ * proxyBeanMethods = false 提高启动速度
  *
  * @author iyuLife
  * @date 2023/3/16 10:03
  */
-@Configuration(proxyBeanMethods = false)
+@Configuration
 public class NotifierConfiguration {
     private final InstanceRepository repository;
     private final ObjectProvider<List<Notifier>> otherNotifiers;
@@ -28,12 +29,6 @@ public class NotifierConfiguration {
     public NotifierConfiguration(InstanceRepository repository, ObjectProvider<List<Notifier>> otherNotifiers) {
         this.repository = repository;
         this.otherNotifiers = otherNotifiers;
-    }
-
-    @Bean
-    public FilteringNotifier filteringNotifier() {
-        CompositeNotifier delegate = new CompositeNotifier(this.otherNotifiers.getIfAvailable(Collections::emptyList));
-        return new FilteringNotifier(delegate, this.repository);
     }
 
     /**
@@ -46,7 +41,9 @@ public class NotifierConfiguration {
     @Primary
     @Bean(initMethod = "start", destroyMethod = "stop")
     public RemindingNotifier remindingNotifier() {
-        RemindingNotifier notifier = new RemindingNotifier(filteringNotifier(), this.repository);
+        CompositeNotifier delegate = new CompositeNotifier(this.otherNotifiers.getIfAvailable(Collections::emptyList));
+        FilteringNotifier filteringNotifier = new FilteringNotifier(delegate, this.repository);
+        RemindingNotifier notifier = new RemindingNotifier(filteringNotifier, this.repository);
         notifier.setReminderPeriod(Duration.ofMinutes(10));
         notifier.setCheckReminderInverval(Duration.ofSeconds(10));
         return notifier;

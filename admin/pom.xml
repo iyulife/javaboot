@@ -45,8 +45,8 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
+            <groupId>io.javaboot</groupId>
+            <artifactId>mail-third-party-starter</artifactId>
         </dependency>
     </dependencies>
     <build>

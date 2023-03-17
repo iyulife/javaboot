@@ -25,7 +25,3 @@ management:
   endpoint:
     health:
       show-details: always
-# spring boot admin 配置日志文件
-logging:
-  file:
-    name: /var/log/JavaBoot/JavaBoot-2023-03-16.0.log

@@ -1,31 +1,14 @@
 spring:
   application:
     name: @artifactId@
-  # 增加后台
+  main:
+    allow-circular-references: true
+  # 增加后台登录配置
   security:
     user:
       name: @admin.username@
       password: @admin.username@
-  # 邮件配置
-  mail:
-    host: smtp.qq.com
-    username: 3360739100@qq.com
-    # 暂时不开启
-    # password: wofarsrgokqdciff
-    properties:
-      properties:
-        mail:
-          smpt:
-            auth: true
-            starttls:
-              enable: true
-              required: true
-  boot:
-    admin:
-      notify:
-        mail:
-          to: 3360739100@qq.com # 邮件收件人
-          from: 3360739100@qq.com # 邮件发件人
 server:
   port: 9999
+
 

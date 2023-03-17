@@ -21,6 +21,8 @@
         <module>cloud-starter</module>
         <!-- 日志 自动装配器 -->
         <module>log-starter</module>
+        <!-- 第三方 自动装配器 -->
+        <module>third-party-starter</module>
     </modules>
 
 

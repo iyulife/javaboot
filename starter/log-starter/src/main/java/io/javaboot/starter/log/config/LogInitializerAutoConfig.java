@@ -1,6 +1,7 @@
 package io.javaboot.starter.log.config;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.env.EnvironmentPostProcessor;
 import org.springframework.core.Ordered;
@@ -19,7 +20,13 @@ public class LogInitializerAutoConfig implements EnvironmentPostProcessor, Order
     @Override
     public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
         String appName = environment.getProperty("spring.application.name");
-        String logBase = environment.getProperty("LOGGING_PATH", "/var/log");
+        /**
+         * 未获取到应用名称 TODO 不知道原因
+         */
+        if (StringUtils.isBlank(appName)) {
+            return;
+        }
+        String logBase = environment.getProperty("LOGGING_PATH", "/var/log/javaBoot");
         LocalDate today = LocalDate.now();
         /**
          * 日志名 ${appName}-%d{yyyy-MM-dd}.%i.log

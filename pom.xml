@@ -43,6 +43,16 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>6.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.javaboot</groupId>
+                <artifactId>mail-third-party-starter</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
                 <groupId>io.javaboot</groupId>
                 <artifactId>cloud-starter</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
@@ -128,11 +138,6 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>3.12.0</version>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.servlet</groupId>
-                <artifactId>jakarta.servlet-api</artifactId>
-                <version>5.0.0</version>
             </dependency>
             <!-- 本身依赖-->
             <dependency>
