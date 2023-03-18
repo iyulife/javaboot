@@ -43,7 +43,17 @@
   ```
 
 ## 项目结构
-
+```lua
+javaBoot
+├── admin -- 管理器(后台管理/监控)[9999]
+├── bootstrap -- 启动器(验证项目模块)[8888]
+├── core -- 核心器(只能被依赖/工具包/bean包/公共方法/异常包)
+└── starter -- 自动装配器
+     ├── cloud-starter -- 微服务自动装配器
+     ├── log-starter -- 日志自动装配器
+     ├── third-party-starter -- 第三方自动装配器
+         ├── mail-third-party-starter -- 邮件自动装配器
+```
 ### ---bootstrap 启动器
 
 ### ---cloud-starter 微服务自动装配器
