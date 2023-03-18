@@ -1,17 +1,6 @@
 spring:
   application:
     name: @artifactId@
-  # spring boot admin 配置
-  boot:
-    admin:
-      client:
-        # 服务端 url
-        url: http://127.0.0.1:9999
-        instance:
-          # 客户端实例 url
-          service-url: http://127.0.0.1:8888
-          # 客户端实例名称
-          name: @artifactId@
 server:
   port: 8888
 # spring boot admin 配置
