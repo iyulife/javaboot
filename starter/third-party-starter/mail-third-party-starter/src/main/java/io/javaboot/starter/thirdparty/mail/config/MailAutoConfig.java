@@ -2,6 +2,8 @@ package io.javaboot.starter.thirdparty.mail.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.core.env.Environment;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
@@ -13,6 +15,7 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
  * @date 2023/3/16 20:06
  */
 @Configuration
+@Order(value = Ordered.HIGHEST_PRECEDENCE)
 public class MailAutoConfig {
 
     private final Environment environment;
