@@ -1,9 +1,8 @@
-package io.javaboot.controller.beans.vo;
+package io.javaboot.bootstrap.interfaces.facade.beans.vo;
 
 import lombok.Data;
 
 import java.io.Serializable;
-
 /**
  * Description:
  *
