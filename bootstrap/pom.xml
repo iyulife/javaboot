@@ -14,7 +14,12 @@
     <artifactId>bootstrap</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <description>启动器</description>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>interface-bootstrap</module>
+        <module>adapter-bootstrap</module>
+    </modules>
 
     <dependencies>
         <dependency>
