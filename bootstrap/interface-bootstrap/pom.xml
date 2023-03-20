@@ -17,7 +17,7 @@
     <description>Bootstrap 接口层</description>
 
     <modules>
-        <module>facade-interface-bootstrap</module>
+        <module>facade-interfaces-bootstrap</module>
     </modules>
 
 
