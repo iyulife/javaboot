@@ -16,5 +16,11 @@
     <packaging>jar</packaging>
     <description>Bootstrap 接口层对外提供接口</description>
 
+    <dependencies>
+        <dependency>
+            <groupId>io.javaboot</groupId>
+            <artifactId>log-starter</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
