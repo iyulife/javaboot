@@ -16,5 +16,10 @@
     <packaging>jar</packaging>
     <description>bootstrap 适配器接口层实现</description>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>io.javaboot</groupId>
+            <artifactId>facade-interface-bootstrap</artifactId>
+        </dependency>
+    </dependencies>
 </project>

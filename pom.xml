@@ -43,6 +43,11 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>io.javaboot</groupId>
+                <artifactId>facade-interface-bootstrap</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
                 <groupId>jakarta.servlet</groupId>
                 <artifactId>jakarta.servlet-api</artifactId>
                 <version>6.0.0</version>
