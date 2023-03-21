@@ -1,4 +1,4 @@
-package io.javaboot.bootstrap;
+package io.javaboot.admin;
 
 import io.javaboot.starter.cloud.annotation.EnableJavaBootDiscoveryClient;
 import lombok.extern.slf4j.Slf4j;
@@ -9,15 +9,21 @@ import org.springframework.scheduling.annotation.Scheduled;
 
 import java.time.LocalDateTime;
 
+/**
+ * Description:
+ *
+ * @author iyuLife
+ * @date 2023/3/21 16:43
+ */
 @SpringBootApplication
 @Slf4j
 @EnableScheduling
 @EnableJavaBootDiscoveryClient
-public class BootstrapApplication {
+public class AdminApplication {
     public static void main(String[] args) {
-        log.info("---JavaBoot Bootstrap is starting ---");
-        SpringApplication.run(BootstrapApplication.class, args);
-        log.info("---JavaBoot Bootstrap is running ---");
+        log.info("---JavaBoot Admin is starting ---");
+        SpringApplication.run(AdminApplication.class, args);
+        log.info("---JavaBoot Admin is running ---");
     }
 
     /**
@@ -25,6 +31,6 @@ public class BootstrapApplication {
      */
     @Scheduled(cron = "0/59 * * * * ?")
     public void run20s() {
-        log.info("<=======Bootstrap 定时任务:{}", LocalDateTime.now());
+        log.info("<=======Admin 定时任务:{}", LocalDateTime.now());
     }
 }

@@ -10,9 +10,9 @@ import org.springframework.context.annotation.ComponentScan;
  * @author iyuLife
  * @date 2023/3/10 11:11
  */
-@SpringBootTest(classes = JavaBootAdminApplicationTests.class)
-@ComponentScan("io.javaboot")
+@SpringBootTest(classes = AdminApplicationTests.class)
+@ComponentScan("io.javaboot.admin")
 @Slf4j
-class JavaBootAdminApplicationTests {
+class AdminApplicationTests {
 
 }
