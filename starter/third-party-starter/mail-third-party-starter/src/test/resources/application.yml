@@ -1,0 +1,29 @@
+spring:
+  # 邮件配置
+  mail:
+    host: smtp.qq.com
+    username: 3360739100@qq.com
+    # 暂时不开启
+    password: wofarsrgokqdciff
+    properties:
+      smtp:
+        auth: true
+        starttls:
+          enable: true
+          required: true
+  boot:
+    admin:
+      ui:
+        title: JavaBootAdminServer
+      notify:
+        mail:
+          # 逗号分隔的邮件收件人列表
+          to: 3360739100@qq.com
+          # 开启邮箱通知
+          enabled: true
+          # 不需要发送通知的状态：从状态A:到状态B
+          ignore-changes: { "UNKNOWN:UP" }
+          # 逗号分隔的抄送收件人列表
+          cc: 3360739100@qq.com
+          # 发件人
+          from: 3360739100@qq.com

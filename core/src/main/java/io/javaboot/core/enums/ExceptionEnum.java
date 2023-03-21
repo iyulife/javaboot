@@ -30,6 +30,6 @@ public enum ExceptionEnum implements CommonResult {
 
     @Override
     public String getResultModule() {
-        return "[module: javaBoot-core]";
+        return "core";
     }
 }

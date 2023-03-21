@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: @artifactId@
+server:
+  port: 8888
+# spring boot admin 配置
+management:
+  endpoints:
+    web:
+      exposure:
+        # admin中暴漏的接口 - 所有接口
+        include: "*"
+  # 健康检查一直开启
+  endpoint:
+    health:
+      show-details: always

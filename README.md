@@ -43,7 +43,17 @@
   ```
 
 ## 项目结构
-
+```lua
+javaBoot
+├── admin -- 管理器(后台管理/监控)[9999]
+├── bootstrap -- 启动器(验证项目模块)[8888]
+├── core -- 核心器(只能被依赖/工具包/bean包/公共方法/异常包)
+└── starter -- 自动装配器
+     ├── cloud-starter -- 微服务自动装配器
+     ├── log-starter -- 日志自动装配器
+     ├── third-party-starter -- 第三方自动装配器
+         ├── mail-third-party-starter -- 邮件自动装配器
+```
 ### ---bootstrap 启动器
 
 ### ---cloud-starter 微服务自动装配器
@@ -56,13 +66,16 @@
 
 - 引入spring boot 3.0.4
 - 引入jdk 17.06
-- 如果报错找不到“C:/TEMP",在启动时加入参数`-Djava.io.tmpdir=D:\TEMP`
+- 如果报错找不到“C:\Windows\Temp",在启动时加入参数`-Djava.io.tmpdir=D:\TEMP`
+- 如果profile设置为Dev则日志只会输出到控制台，否则输出到/val/log目录下
+- 刚安装好nacos点击startup.cmd时出现报错`java.io.IOException: java.lang.IllegalArgumentException: db.num is null`
+## 开发计划
 
-## 未完成
-
-- 日志可以读取application.properties
+- 日志链路跟踪（√）
+- 集成spring boot admin，支持上下线发邮件、在线查看日志（√）
+- 集成feign
 
 ## 参照
 
 - https://github.com/986223663/spring-cloud-alibaba-dubbo
-- https://gitee.com/jwb-wuyun/tracelog
+- https://gitee.com/log4j/pig?_from=gitee_search#https://gitee.com/link?target=https%3A%2F%2Fpaper.pigx.vip
