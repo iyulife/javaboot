@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>io.javaboot</groupId>
-            <artifactId>facade-interface-bootstrap</artifactId>
+            <artifactId>facade-interfaces-bootstrap</artifactId>
         </dependency>
     </dependencies>
 </project>

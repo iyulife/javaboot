@@ -44,7 +44,7 @@
         <dependencies>
             <dependency>
                 <groupId>io.javaboot</groupId>
-                <artifactId>facade-interface-bootstrap</artifactId>
+                <artifactId>facade-interfaces-bootstrap</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>

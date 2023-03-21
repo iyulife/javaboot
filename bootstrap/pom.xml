@@ -17,7 +17,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>interface-bootstrap</module>
+        <module>interfaces-bootstrap</module>
         <module>adapter-bootstrap</module>
         <module>bootstrap-bootstrap</module>
     </modules>

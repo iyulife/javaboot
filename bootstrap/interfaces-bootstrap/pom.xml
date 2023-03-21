@@ -11,9 +11,8 @@
     </parent>
 
     <groupId>io.javaboot</groupId>
-    <artifactId>interface-bootstrap</artifactId>
+    <artifactId>interfaces-bootstrap</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
     <description>Bootstrap 接口层</description>
 
     <modules>
