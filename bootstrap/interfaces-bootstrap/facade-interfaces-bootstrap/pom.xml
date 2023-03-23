@@ -6,19 +6,14 @@
 
     <parent>
         <groupId>io.javaboot</groupId>
-        <artifactId>javaboot</artifactId>
+        <artifactId>interfaces-bootstrap</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <groupId>io.javaboot</groupId>
-    <artifactId>bootstrap</artifactId>
+    <artifactId>facade-interfaces-bootstrap</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <description>启动器</description>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
-    <modules>
-        <module>bootstrap-bootstrap</module>
-        <module>interfaces-bootstrap</module>
-    </modules>
 
 </project>

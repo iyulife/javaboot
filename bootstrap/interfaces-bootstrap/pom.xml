@@ -5,20 +5,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
+        <artifactId>bootstrap</artifactId>
         <groupId>io.javaboot</groupId>
-        <artifactId>javaboot</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <groupId>io.javaboot</groupId>
-    <artifactId>bootstrap</artifactId>
+    <artifactId>interfaces-bootstrap</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <description>启动器</description>
     <packaging>pom</packaging>
 
     <modules>
-        <module>bootstrap-bootstrap</module>
-        <module>interfaces-bootstrap</module>
+        <module>facade-interfaces-bootstrap</module>
     </modules>
 
 </project>
