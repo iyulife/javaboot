@@ -1,4 +1,4 @@
-package io.javaboot.controller.beans.vo;
+package io.javaboot.bootstrap.controller.beans.vo;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package io.javaboot;
+package io.javaboot.bootstrap;
 
 import io.javaboot.starter.cloud.annotation.EnableJavaBootDiscoveryClient;
 import lombok.extern.slf4j.Slf4j;
@@ -19,11 +19,11 @@ import java.time.LocalDateTime;
 @Slf4j
 @EnableScheduling
 @EnableJavaBootDiscoveryClient
-public class JavaBootApplication {
+public class JavaBootBootstrapApplication {
 
     public static void main(String[] args) {
         log.info("---JavaBoot Bootstrap is starting ---");
-        SpringApplication.run(JavaBootApplication.class, args);
+        SpringApplication.run(JavaBootBootstrapApplication.class, args);
         log.info("---JavaBoot Bootstrap is running ---");
     }
 

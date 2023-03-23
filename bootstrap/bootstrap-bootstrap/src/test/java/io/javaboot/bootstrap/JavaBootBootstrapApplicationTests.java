@@ -1,9 +1,9 @@
-package io.javaboot;
+package io.javaboot.bootstrap;
 
 import com.alibaba.fastjson.JSON;
-import io.javaboot.controller.TestController;
-import io.javaboot.controller.beans.dto.UserDTO;
-import io.javaboot.controller.beans.vo.UserVO;
+import io.javaboot.bootstrap.controller.TestController;
+import io.javaboot.bootstrap.controller.beans.dto.UserDTO;
+import io.javaboot.bootstrap.controller.beans.vo.UserVO;
 import io.javaboot.core.common.result.ResultModel;
 import io.javaboot.core.utils.UUIDUtil;
 import jakarta.annotation.Resource;
@@ -18,10 +18,10 @@ import org.springframework.context.annotation.ComponentScan;
  * @author iyuLife
  * @date 2023/3/10 11:11
  */
-@SpringBootTest(classes = JavaBootApplicationTests.class)
+@SpringBootTest(classes = JavaBootBootstrapApplicationTests.class)
 @ComponentScan("io.javaboot")
 @Slf4j
-class JavaBootApplicationTests {
+class JavaBootBootstrapApplicationTests {
 
     @Resource
     private TestController testController;

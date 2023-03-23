@@ -1,4 +1,4 @@
-package io.javaboot.controller.beans.dto;
+package io.javaboot.bootstrap.controller.beans.dto;
 
 import lombok.Data;
 

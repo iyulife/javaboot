@@ -1,7 +1,7 @@
-package io.javaboot.controller;
+package io.javaboot.bootstrap.controller;
 
-import io.javaboot.controller.beans.dto.UserDTO;
-import io.javaboot.controller.beans.vo.UserVO;
+import io.javaboot.bootstrap.controller.beans.dto.UserDTO;
+import io.javaboot.bootstrap.controller.beans.vo.UserVO;
 import io.javaboot.core.common.result.ResultModel;
 import io.javaboot.core.common.result.ResultUtil;
 import io.javaboot.starter.log.annotation.JavaBootTraceLog;
