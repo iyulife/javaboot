@@ -54,13 +54,6 @@ javaBoot
      ├── third-party-starter -- 第三方自动装配器
          ├── mail-third-party-starter -- 邮件自动装配器
 ```
-### ---bootstrap 启动器
-
-### ---cloud-starter 微服务自动装配器
-
-### ---core 核心器
-
-### ---log-starter 日志自动装配器
 
 ## 说明
 
@@ -69,6 +62,8 @@ javaBoot
 - 如果报错找不到“C:\Windows\Temp",在启动时加入参数`-Djava.io.tmpdir=D:\TEMP`
 - 如果profile设置为Dev则日志只会输出到控制台，否则输出到/val/log目录下
 - 刚安装好nacos点击startup.cmd时出现报错`java.io.IOException: java.lang.IllegalArgumentException: db.num is null`
+  [https://2th.top/post/40](https://2th.top/post/40)
+- spring boot admin 启动顺序，先client，最后admin，否则无法注册到admin
 ## 开发计划
 
 - 日志链路跟踪（√）
